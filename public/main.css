@@ -1,0 +1,47 @@
+body {
+  background-color:#333;
+  font-family: 'Droid Sans Mono', sans-serif;
+  color:lightgreen;
+}
+
+h2 {
+  letter-spacing:2px;
+}
+
+#header {
+  padding:10px;
+  border: 5px solid lightgreen;
+  -moz-border-radius: 2em;
+  -webkit-border-radius: 2em;
+  border-radius: 2em;
+}
+
+#main {
+  margin:auto;
+  width:900px;
+}
+
+div.tweet {
+  padding:20px 0px;
+}
+
+div.tweet div {
+  margin:10px 0px;
+}
+
+a {
+  text-decoration:none;
+  color:lightgreen;
+}
+
+a:hover {
+  text-decoration:underline;
+}
+
+#footer {
+  padding:10px;
+  border: 5px solid lightgreen;
+  -moz-border-radius: 2em;
+  -webkit-border-radius: 2em;
+  border-radius: 2em;
+}

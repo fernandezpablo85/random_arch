@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'/>
+    <link href='main.css' rel='stylesheet'/>
+    <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
+  </head>
+  <body>
+    <div id='main'>
+    <div id='header'>
+      <h1>#TheArchitect Tweets</h1>
+      <h2>home of the best software architecture tips</h2>
+    </div>
+    <div id='content'></div>
+    
+    <script>
+      function render(tw) {
+        var tpl = "<span><a href='http://twitter.com/"+tw.user+"' target='_blank'>@"+tw.user+"</a></span><div>"+tw.text+"</div>";
+        var div = document.createElement("div");
+        div.className = 'tweet';
+        div.innerHTML = tpl;
+        document.getElementById('main').appendChild(div);
+      }
+
+      var tweets = _(<%=@tweets%>).map(function(status) { return JSON.parse(status)});
+      _(tweets).each(function (t) {render(t)});
+    </script>
+    <div id='footer'>
+      <h2>Created by <a href="http://twitter.com/fernandezpablo">@fernandezpablo</a> - 2012</h2>
+    </div>    
+  </div>
+  <body>
+</html>
