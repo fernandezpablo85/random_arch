@@ -1,4 +1,5 @@
 require 'rubygems'
+
 require 'sinatra'
 require 'twitter'
 require 'erb'
