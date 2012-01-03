@@ -1,7 +1,6 @@
 require 'rubygems'
-require 'twitter'
 require 'sinatra'
-require 'sinatra/reloader'
+require 'twitter'
 require 'erb'
 
 def transform_status status
